@@ -1,0 +1,20 @@
+<div class="d-flex align-items-center justify-content-between border p-2 mb-2 rounded w-75 mx-auto">
+  <div class="form-check">
+    <input
+      class="form-check-input" type="checkbox" [checked]="todo.completed" (change)="toggle()" id="{{todo.id}}"
+
+    >
+    <label
+      class="form-check-label"
+      [ngClass]="{'text-decoration-line-through text-muted': todo.completed}"
+      for="{{todo.id}}"
+    >
+      {{todo.title}}
+    </label>
+  </div>
+   <div class="text-muted small text-end ms-3">
+    <div>{{ todo.description }}</div>
+   
+  </div>
+  <button (click)="delete()" class="btn btn-danger btn-sm">Delete</button>
+</div>

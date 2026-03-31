@@ -1,0 +1,10 @@
+.done{
+  text-decoration: line-through;
+  color: gray;
+}
+:host {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

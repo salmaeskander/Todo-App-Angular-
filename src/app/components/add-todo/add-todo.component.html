@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="submit()" class="w-75 mx-auto">
+<h1 class="text-center mb-4">Create Todo</h1>
+  <div class="input-group mb-2">
+    <input
+      type="text" formControlName="title" placeholder="Add new todo" class="form-control"
+    />
+
+  </div>
+
+  <div class="mb-2">
+    <input
+      type="text"
+      formControlName="description"
+      placeholder="Description "
+      class="form-control"
+
+    />
+  </div>
+<button type="submit"
+
+[disabled]=isNotValid()
+class="btn btn-primary w-25 d-flex justify-content-center align-items-center mx-auto mt-4 height-50
+">Add</button>
+
+
+</form>

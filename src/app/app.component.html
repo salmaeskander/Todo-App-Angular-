@@ -1,0 +1,19 @@
+<nav class="navbar bg-primary w-100" >
+   <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1 text-light">MY TODO App</span>
+    <button (click)="isCreatTodo = !isCreatTodo" class="btn btn-light">{{isCreatTodo ? 'Show List' : 'Create Todo'}}</button>
+  </div>
+</nav>
+
+
+<div class="container mt-5" host>
+
+  @if(isCreatTodo){
+
+<app-add-todo (newItemAdded)="isCreatTodo = false"></app-add-todo>
+  }@else {
+    <app-todo-list></app-todo-list>
+  }
+
+
+</div>

@@ -1,0 +1,12 @@
+
+
+  @if(todoList.length === 0) {
+  <p class="text-center text-muted">No todos yet. Add some!</p>
+} @else {
+  <p class="text-center h1">
+    You have {{todoList.length}} {{todoList.length === 1 ? 'todo' : 'todos'}}
+  </p>
+  <div *ngFor="let todo of todoList">
+    <app-todo-item [todo]="todo" (refresh)="refreshTodos()"></app-todo-item>
+  </div>
+}
